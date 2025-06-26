@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversary ke-5 💕</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: 
+                linear-gradient(135deg, rgba(255, 182, 193, 0.9), rgba(255, 218, 185, 0.9), rgba(230, 230, 250, 0.9)),
+                linear-gradient(45deg, #ffeaa7, #fab1a0, #e17055, #6c5ce7);
+            background-size: cover, 400% 400%;
+            background-position: center, 0% 50%;
+            background-attachment: fixed;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            animation: gradientShift 10s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: center, 0% 50%; }
+            50% { background-position: center, 100% 50%; }
+            100% { background-position: center, 0% 50%; }
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 80%, rgba(255, 182, 193, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 218, 185, 0.4) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px;
+            position: relative;
+        }
+
+        .luxury-card {
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.95) 0%, 
+                rgba(255, 255, 255, 0.9) 50%, 
+                rgba(255, 248, 240, 0.95) 100%);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 50px;
+            margin: 30px 0;
+            box-shadow: 
+                0 25px 60px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(255, 255, 255, 0.6),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            border: 2px solid rgba(255, 182, 193, 0.2);
+            position: relative;
+            overflow: hidden;
+            animation: cardFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes cardFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .luxury-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 182, 193, 0.5), transparent);
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ff6b9d, #ffa500, #ff69b4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            position: relative;
+            animation: titleShimmer 3s ease-in-out infinite;
+        }
+
+        .subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.4rem;
+            color: #666;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+        }
+
+        .cute-decorations {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            animation: floatCute 3s ease-in-out infinite;
+        }
+
+        .cute-icon {
+            font-size: 2.5rem;
+            opacity: 0.8;
+            animation: bounce 2s infinite;
+            filter: drop-shadow(0 4px 8px rgba(255, 182, 193, 0.3));
+        }
+
+        .cute-icon:nth-child(2) { animation-delay: 0.3s; }
+        .cute-icon:nth-child(3) { animation-delay: 0.6s; }
+
+        .music-section {
+            background: linear-gradient(135deg, 
+                rgba(255, 182, 193, 0.2), 
+                rgba(255, 218, 185, 0.2));
+            border-radius: 25px;
+            padding: 35px;
+            margin: 40px 0;
+            border: 2px solid rgba(255, 182, 193, 0.3);
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        .music-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #d63384;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .music-status {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin: 15px 0;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 182, 193, 0.2);
+        }
+
+        .luxury-button {
+            background: linear-gradient(135deg, #ff6b9d, #ff8fab);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255, 107, 157, 0.3);
+            margin: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .luxury-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .luxury-button:hover::before {
+            left: 100%;
+        }
+
+        .luxury-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 107, 157, 0.4);
+        }
+
+        .secondary-button {
+            background: linear-gradient(135deg, #ffa500, #ffb347);
+            box-shadow: 0 8px 25px rgba(255, 165, 0, 0.3);
+        }
+
+        .timer-section {
+            background: linear-gradient(135deg, 
+                rgba(230, 230, 250, 0.3), 
+                rgba(255, 248, 240, 0.3));
+            border-radius: 25px;
+            padding: 40px;
+            text-align: center;
+            margin: 30px 0;
+            border: 2px solid rgba(230, 230, 250, 0.4);
+        }
+
+        .timer-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #6a5acd;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .timer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .timer-card {
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.9), 
+                rgba(255, 248, 240, 0.9));
+            border-radius: 20px;
+            padding: 25px 15px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 2px solid rgba(255, 182, 193, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .timer-card:hover {
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        .timer-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ff6b9d, #6a5acd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .timer-label {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .milestone-section {
+            margin: 50px 0;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            text-align: center;
+            color: #6a5acd;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .milestone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .milestone-card {
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.95), 
+                rgba(255, 248, 240, 0.9));
+            border-radius: 25px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 2px solid rgba(255, 182, 193, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .milestone-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 182, 193, 0.1) 0%, transparent 70%);
+            transition: transform 0.6s ease;
+            transform: scale(0);
+        }
+
+        .milestone-card:hover::before {
+            transform: scale(1);
+        }
+
+        .milestone-card:hover {
+            transform: translateY(-10px) rotate(1deg);
+            box-shadow: 0 25px 50px rgba(255, 182, 193, 0.2);
+        }
+
+        .milestone-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .milestone-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #d63384;
+            margin-bottom: 10px;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .milestone-desc {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .memory-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .memory-card {
+            height: 250px;
+            background: linear-gradient(135deg, 
+                rgba(255, 218, 185, 0.8), 
+                rgba(255, 182, 193, 0.8));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #d63384;
+            font-weight: 500;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .memory-card:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 20px 45px rgba(255, 182, 193, 0.3);
+        }
+
+        .luxury-message {
+            background: linear-gradient(135deg, 
+                rgba(106, 90, 205, 0.15), 
+                rgba(255, 182, 193, 0.15));
+            border-radius: 25px;
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+            border: 2px solid rgba(106, 90, 205, 0.2);
+        }
+
+        .message-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #6a5acd;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .message-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .floating-element {
+            position: absolute;
+            font-size: 1.5rem;
+            opacity: 0.6;
+            animation: floatAround 8s ease-in-out infinite;
+        }
+
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1000;
+            color: #ffd700;
+            font-size: 20px;
+            animation: sparkleAnimation 1s ease-out forwards;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        /* Game Styles */
+        .game-canvas {
+            border: 3px solid rgba(255, 182, 193, 0.3);
+            border-radius: 15px;
+            background: linear-gradient(135deg, #e8f4fd, #fef7e0);
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Animations */
+        @keyframes titleShimmer {
+            0%, 100% { filter: hue-rotate(0deg) brightness(1); }
+            50% { filter: hue-rotate(20deg) brightness(1.1); }
+        }
+
+        @keyframes floatCute {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-15px); }
+            60% { transform: translateY(-8px); }
+        }
+
+        @keyframes floatAround {
+            0% { transform: translate(0, 100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% { transform: translate(100px, -100px) rotate(360deg); opacity: 0; }
+        }
+
+        @keyframes sparkleAnimation {
+            0% { transform: translateY(0) scale(0); opacity: 1; }
+            100% { transform: translateY(-50px) scale(1); opacity: 0; }
+        }
+
+        @keyframes romanticPop {
+            0% { transform: translate(-50%, -50%) scale(0.3) rotate(-10deg); opacity: 0; }
+            50% { transform: translate(-50%, -50%) scale(1.1) rotate(2deg); opacity: 0.9; }
+            100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 1; }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container { padding: 20px; }
+            .luxury-card { padding: 30px 25px; }
+            .main-title { font-size: 3rem; }
+            .subtitle { font-size: 1.2rem; }
+            .timer-grid { grid-template-columns: repeat(2, 1fr); }
+            .milestone-grid { grid-template-columns: 1fr; }
+            .button-group { flex-direction: column; align-items: center; }
+        }
+
+        @media (max-width: 480px) {
+            .main-title { font-size: 2.5rem; }
+            .section-title { font-size: 2.2rem; }
+            .luxury-card { padding: 20px 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-elements"></div>
+    
+    <div class="container">
+        <!-- Header Section -->
+        <div class="luxury-card">
+            <div class="header-section">
+                <h1 class="main-title">Anniversary ke-5</h1>
+                <p class="subtitle">Merayakan Cinta yang Semakin Indah</p>
+                <div class="cute-decorations">
+                    <span class="cute-icon">🌸</span>
+                    <span class="cute-icon">💕</span>
+                    <span class="cute-icon">✨</span>
+                </div>
+                
+                <!-- Music Section -->
+                <div class="music-section">
+                    <h4 class="music-title">🎵 "Nothing" by Bruno Major 🎵</h4>
+                    <p style="color: #666; margin-bottom: 20px;">Soundtrack cinta untuk anniversary yang sempurna</p>
+                    <div id="musicStatus" class="music-status">
+                        🎵 Siap untuk diputar - Klik untuk memulai musik
+                    </div>
+                    <div class="button-group">
+                        <button onclick="playBrunoMajor()" class="luxury-button" id="playBtn">
+                            ▶️ Putar Musik Romantis
+                        </button>
+                        <button onclick="stopBrunoMajor()" class="luxury-button secondary-button">
+                            ⏸️ Stop Musik
+                        </button>
+                        <button onclick="testAlternativeMusic()" class="luxury-button" style="background: linear-gradient(135deg, #6a5acd, #9370db); font-size: 0.9rem;">
+                            🔧 Test Alternatif
+                        </button>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <label style="color: #666; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <input type="checkbox" id="autoLoop" checked style="accent-color: #ff6b9d;">
+                            <span>🔁 Repeat otomatis</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Mini Game Section -->
+                <div class="music-section">
+                    <h4 class="music-title">🎮 Anniversary Dino Game 🦕</h4>
+                    <p style="color: #666; margin-bottom: 20px;">Mini game seru untuk mengisi waktu sambil mendengarkan musik!</p>
+                    
+                    <div style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 248, 240, 0.9)); border-radius: 20px; padding: 25px; margin: 20px 0; border: 2px solid rgba(255, 182, 193, 0.3);">
+                        <div style="text-align: center; margin-bottom: 20px;">
+                            <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 15px;">
+                                <div style="background: rgba(255, 182, 193, 0.2); padding: 15px 20px; border-radius: 15px;">
+                                    <div style="font-size: 12px; color: #666; margin-bottom: 5px;">💖 Score</div>
+                                    <div id="gameScore" style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: #d63384;">0</div>
+                                </div>
+                                <div style="background: rgba(255, 218, 185, 0.2); padding: 15px 20px; border-radius: 15px;">
+                                    <div style="font-size: 12px; color: #666; margin-bottom: 5px;">🏆 High Score</div>
+                                    <div id="highScore" style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: #ffa500;">0</div>
+                                </div>
+                            </div>
+                            
+                            <canvas id="gameCanvas" width="600" height="200" class="game-canvas"></canvas>
+                            
+                            <div style="margin-top: 15px;">
+                                <button onclick="startGame()" id="startBtn" class="luxury-button" style="margin: 5px;">
+                                    🎮 Start Game
+                                </button>
+                                <button onclick="pauseGame()" id="pauseBtn" class="luxury-button secondary-button" style="margin: 5px;" disabled>
+                                    ⏸️ Pause
+                                </button>
+                                <button onclick="resetGame()" class="luxury-button" style="background: linear-gradient(135deg, #6a5acd, #9370db); margin: 5px;">
+                                    🔄 Reset
+                                </button>
+                            </div>
+                            
+                            <div style="margin-top: 15px; font-size: 14px; color: #666;">
+                                🎯 Tekan <strong>SPACE</strong> atau <strong>klik canvas</strong> untuk lompat!<br>
+                                🦕 Hindari kaktus dan raih score setinggi mungkin!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio Element -->
+                <audio id="brunoMajorAudio" preload="auto" style="display: none;" crossorigin="anonymous">
+                    <source src="https://raw.githubusercontent.com/ApittoAyu/anniv/main/nothing-bruno-major.mp3" type="audio/mpeg">
+                    <source src="https://drive.google.com/uc?export=download&id=1WbZ1fUpXT_0_c6bTM5mluHaSGD3Bum0u" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <!-- Timer Section -->
+        <div class="luxury-card">
+            <div class="timer-section">
+                <h3 class="timer-title">Sudah Bersama Selama ✨</h3>
+                <div class="timer-grid">
+                    <div class="timer-card">
+                        <span class="timer-number">5</span>
+                        <span class="timer-label">Tahun</span>
+                    </div>
+                    <div class="timer-card">
+                        <span class="timer-number">60</span>
+                        <span class="timer-label">Bulan</span>
+                    </div>
+                    <div class="timer-card">
+                        <span class="timer-number">1825</span>
+                        <span class="timer-label">Hari</span>
+                    </div>
+                    <div class="timer-card">
+                        <span class="timer-number">43800</span>
+                        <span class="timer-label">Jam</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Milestone Section -->
+        <div class="luxury-card">
+            <div class="milestone-section">
+                <h2 class="section-title">Perjalanan Cinta Kita 💕</h2>
+                <div class="milestone-grid">
+                    <div class="milestone-card">
+                        <span class="milestone-icon">🌱</span>
+                        <h3 class="milestone-title">Tahun Pertama</h3>
+                        <p class="milestone-desc">Awal yang penuh keajaiban, di mana setiap hari adalah petualangan baru dalam cinta</p>
+                    </div>
+                    <div class="milestone-card">
+                        <span class="milestone-icon">🌸</span>
+                        <h3 class="milestone-title">Tahun Kedua</h3>
+                        <p class="milestone-desc">Cinta yang mulai mekar, semakin mengenal dan memahami satu sama lain</p>
+                    </div>
+                    <div class="milestone-card">
+                        <span class="milestone-icon">🌺</span>
+                        <h3 class="milestone-title">Tahun Ketiga</h3>
+                        <p class="milestone-desc">Petualangan bersama, menciptakan kenangan indah di setiap langkah</p>
+                    </div>
+                    <div class="milestone-card">
+                        <span class="milestone-icon">🌻</span>
+                        <h3 class="milestone-title">Tahun Keempat</h3>
+                        <p class="milestone-desc">Melewati tantangan bersama, cinta yang semakin kuat dan dewasa</p>
+                    </div>
+                    <div class="milestone-card">
+                        <span class="milestone-icon">👑</span>
+                        <h3 class="milestone-title">Tahun Kelima</h3>
+                        <p class="milestone-desc">Milestone emas, cinta yang telah teruji waktu dan semakin bersinar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Memory Gallery -->
+        <div class="luxury-card">
+            <div class="milestone-section">
+                <h2 class="section-title">Galeri Kenangan Manis 📸</h2>
+                <div class="memory-gallery">
+                    <div class="memory-card">📷 Foto Pertama Kita</div>
+                    <div class="memory-card">🎂 Ulang Tahun Bersama</div>
+                    <div class="memory-card">🏖️ Liburan Romantis</div>
+                    <div class="memory-card">🎉 Perayaan Spesial</div>
+                    <div class="memory-card">💑 Momen Intimate</div>
+                    <div class="memory-card">🎈 Anniversary Sebelumnya</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Special Message -->
+        <div class="luxury-card">
+            <div class="luxury-message">
+                <h3 class="message-title">Pesan Cinta Spesial ✨</h3>
+                <p class="message-text">
+                    Lima tahun yang menakjubkan telah berlalu dalam sekejap mata. Dari hari pertama kita bertemu hingga detik ini, setiap momen bersamamu adalah hadiah terindah dalam hidupku. Terima kasih telah menjadi partner terbaik, sahabat terdekat, dan cinta sejatiku. Mari kita terus menulis cerita cinta yang indah untuk tahun-tahun mendatang. I love you more each day! 💕
+                </p>
+            </div>
+        </div>
+
+        <!-- Interactive Buttons -->
+        <div class="luxury-card">
+            <div style="text-align: center;">
+                <h3 class="section-title">Celebration Corner 🎊</h3>
+                <div class="button-group">
+                    <button class="luxury-button" onclick="showSurprise()">🎁 Surprise Spesial</button>
+                    <button class="luxury-button secondary-button" onclick="showMessage()">💌 Love Letter</button>
+                    <button class="luxury-button" onclick="showMusicPlayer()">🎼 Playlist Romantis</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Music Player Extended -->
+        <div id="musicPlayer" class="luxury-card" style="display: none;">
+            <h3 style="text-align: center; margin-bottom: 30px; font-family: 'Playfair Display', serif; color: #d63384; font-size: 2rem;">🎵 Playlist Anniversary 🎵</h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div class="milestone-card" onclick="playRomanticTone('love')" style="cursor: pointer;">
+                    <span class="milestone-icon">💕</span>
+                    <h4 class="milestone-title">Love Theme</h4>
+                    <p class="milestone-desc">Melodi cinta yang lembut</p>
+                </div>
+                <div class="milestone-card" onclick="playRomanticTone('happy')" style="cursor: pointer;">
+                    <span class="milestone-icon">🎉</span>
+                    <h4 class="milestone-title">Celebration</h4>
+                    <p class="milestone-desc">Musik perayaan bahagia</p>
+                </div>
+                <div class="milestone-card" onclick="playRomanticTone('dreamy')" style="cursor: pointer;">
+                    <span class="milestone-icon">🌙</span>
+                    <h4 class="milestone-title">Dreamy Night</h4>
+                    <p class="milestone-desc">Melodi mimpi indah</p>
+                </div>
+                <div class="milestone-card" onclick="playRomanticTone('waltz')" style="cursor: pointer;">
+                    <span class="milestone-icon">💃</span>
+                    <h4 class="milestone-title">Wedding Waltz</h4>
+                    <p class="milestone-desc">Waltz romantis</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <button class="luxury-button" onclick="stopAllMusic()">⏹️ Stop Semua Musik</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Bruno Major "Nothing" Music System
+        let brunoAudio = null;
+        let isBrunoPlaying = false;
+        let hasStartedOnce = false;
+
+        // Web Audio API for romantic tones
+        let audioContext = null;
+        let isWebAudioPlaying = false;
+
+        // Game variables
+        let gameCanvas, gameCtx;
+        let gameRunning = false;
+        let gamePaused = false;
+        let gameScore = 0;
+        let highScore = 0;
+        let gameSpeed = 3;
+        let gameFrame = 0;
+
+        // Game objects
+        let dino = {
+            x: 50,
+            y: 150,
+            width: 40,
+            height: 40,
+            jumping: false,
+            grounded: true,
+            velocity: 0,
+            color: '#ff6b9d'
+        };
+
+        let obstacles = [];
+        let clouds = [];
+        let hearts = [];
+
+        function initBrunoMajorMusic() {
+            const environment = detectHostingEnvironment();
+            
+            brunoAudio = document.getElementById('brunoMajorAudio');
+            
+            if (!brunoAudio) {
+                console.error('Audio element not found');
+                createFallbackAudio();
+                return;
+            }
+
+            brunoAudio.volume = 0.7;
+
+            brunoAudio.addEventListener('loadstart', function() {
+                updateMusicStatus('⏳ Memuat "Nothing" by Bruno Major...', '#ffa500');
+            });
+
+            brunoAudio.addEventListener('loadeddata', function() {
+                const duration = Math.floor(brunoAudio.duration);
+                const minutes = Math.floor(duration / 60);
+                const seconds = duration % 60;
+                updateMusicStatus(`✅ Musik dimuat! Durasi: ${minutes}:${seconds.toString().padStart(2, '0')}`, '#28a745');
+                setTimeout(attemptAutoPlay, 1000);
+            });
+
+            brunoAudio.addEventListener('canplay', function() {
+                updateMusicStatus('🎵 "Nothing" - Bruno Major siap diputar', '#6a5acd');
+                if (!hasStartedOnce) {
+                    setTimeout(attemptAutoPlay, 500);
+                }
+            });
+
+            brunoAudio.addEventListener('play', function() {
+                isBrunoPlaying = true;
+                hasStartedOnce = true;
+                updateMusicStatus('🎵 Sedang memutar "Nothing" by Bruno Major ✨', '#d63384');
+                document.getElementById('playBtn').innerHTML = '⏸️ Jeda Musik';
+                showRomanticNotification();
+                createFloatingElements();
+            });
+
+            brunoAudio.addEventListener('pause', function() {
+                isBrunoPlaying = false;
+                updateMusicStatus('⏸️ Musik dijeda', '#ffa500');
+                document.getElementById('playBtn').innerHTML = '▶️ Putar Musik Romantis';
+            });
+
+            brunoAudio.addEventListener('ended', function() {
+                isBrunoPlaying = false;
+                document.getElementById('playBtn').innerHTML = '▶️ Putar Musik Romantis';
+                
+                if (document.getElementById('autoLoop').checked) {
+                    updateMusicStatus('🔄 Mengulang musik...', '#6a5acd');
+                    setTimeout(() => {
+                        if (brunoAudio) {
+                            brunoAudio.currentTime = 0;
+                            brunoAudio.play();
+                        }
+                    }, 2000);
+                } else {
+                    updateMusicStatus('✅ Musik selesai', '#28a745');
+                }
+            });
+
+            brunoAudio.addEventListener('error', function(e) {
+                console.error('Audio loading error:', e);
+                if (environment === 'local-file') {
+                    updateMusicStatus('❌ File lokal tidak mendukung external audio. Perlu hosting.', '#dc3545');
+                } else {
+                    updateMusicStatus('❌ Gagal memuat musik. Coba "Test Alternatif"', '#dc3545');
+                }
+            });
+
+            if (environment !== 'local-file') {
+                brunoAudio.load();
+            }
+        }
+
+        function updateMusicStatus(message, color = '#666') {
+            const statusElement = document.getElementById('musicStatus');
+            statusElement.innerHTML = message;
+            statusElement.style.color = color;
+            statusElement.style.borderColor = color + '40';
+        }
+
+        function detectHostingEnvironment() {
+            const isLocalFile = window.location.protocol === 'file:';
+            const isLocalServer = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+            if (isLocalFile) {
+                updateMusicStatus('⚠️ File lokal terdeteksi. Upload ke hosting untuk musik berfungsi.', '#ffa500');
+                return 'local-file';
+            } else if (isLocalServer) {
+                updateMusicStatus('🖥️ Local server terdeteksi. Musik seharusnya berfungsi.', '#28a745');
+                return 'local-server';
+            } else {
+                updateMusicStatus('🌐 Website hosted terdeteksi. Musik seharusnya berfungsi.', '#28a745');
+                return 'hosted';
+            }
+        }
+
+        function createFallbackAudio() {
+            brunoAudio = new Audio();
+            brunoAudio.volume = 0.7;
+            brunoAudio.crossOrigin = "anonymous";
+            
+            const urls = [
+                'https://drive.google.com/uc?export=download&id=1WbZ1fUpXT_0_c6bTM5mluHaSGD3Bum0u',
+                'https://drive.google.com/uc?id=1WbZ1fUpXT_0_c6bTM5mluHaSGD3Bum0u&export=download',
+                'https://docs.google.com/uc?export=download&id=1WbZ1fUpXT_0_c6bTM5mluHaSGD3Bum0u'
+            ];
+
+            let urlIndex = 0;
+            function tryNextUrl() {
+                if (urlIndex < urls.length) {
+                    brunoAudio.src = urls[urlIndex];
+                    urlIndex++;
+                    brunoAudio.load();
+                } else {
+                    updateMusicStatus('❌ Semua URL gagal. Periksa link Google Drive.', '#dc3545');
+                }
+            }
+
+            brunoAudio.addEventListener('error', tryNextUrl);
+            brunoAudio.addEventListener('canplay', function() {
+                updateMusicStatus('✅ Musik berhasil dimuat dengan URL alternatif!', '#28a745');
+            });
+
+            tryNextUrl();
+        }
+
+        function testAlternativeMusic() {
+            updateMusicStatus('🔧 Testing berbagai sumber musik...', '#6a5acd');
+            
+            const isLocalFile = window.location.protocol === 'file:';
+            
+            if (isLocalFile) {
+                updateMusicStatus('⚠️ File HTML lokal terdeteksi! Upload ke hosting untuk musik berfungsi.', '#ffa500');
+                showMusicNotification('⚠️ Upload ke Netlify/Vercel atau jalankan local server untuk musik berfungsi');
+                return;
+            }
+            
+            const testUrls = [
+                'https://raw.githubusercontent.com/ApittoAyu/anniv/main/nothing-bruno-major.mp3',
+                'https://drive.google.com/uc?export=download&id=1WbZ1fUpXT_0_c6bTM5mluHaSGD3Bum0u',
+                'https://drive.google.com/uc?id=1WbZ1fUpXT_0_c6bTM5mluHaSGD3Bum0u&export=download'
+            ];
+
+            let successCount = 0;
+            testUrls.forEach((url, index) => {
+                const testAudio = new Audio();
+                
+                testAudio.addEventListener('canplaythrough', function() {
+                    successCount++;
+                    updateMusicStatus(`✅ URL ${index + 1} berhasil! (${successCount}/${testUrls.length})`, '#28a745');
+                    if (brunoAudio) {
+                        brunoAudio.src = url;
+                        brunoAudio.load();
+                        showMusicNotification(`✅ Berhasil! Menggunakan sumber musik ${index + 1}`);
+                    }
+                });
+                
+                testAudio.addEventListener('error', function() {
+                    console.log(`URL ${index + 1} gagal:`, url);
+                    if (index === testUrls.length - 1 && successCount === 0) {
+                        updateMusicStatus('❌ Semua sumber gagal. Perlu hosting atau upload musik ke GitHub.', '#dc3545');
+                    }
+                });
+                
+                testAudio.src = url;
+            });
+        }
+
+        function attemptAutoPlay() {
+            if (hasStartedOnce || isBrunoPlaying) return;
+            
+            if (brunoAudio && brunoAudio.readyState >= 3) {
+                brunoAudio.play().then(() => {
+                    // Auto-play successful
+                }).catch(error => {
+                    console.log('Auto-play blocked:', error);
+                    updateMusicStatus('🎵 Klik tombol play untuk memulai musik romantis', '#6a5acd');
+                });
+            }
+        }
+
+        function playBrunoMajor() {
+            if (!brunoAudio) {
+                initBrunoMajorMusic();
+                setTimeout(playBrunoMajor, 2000);
+                return;
+            }
+
+            if (isBrunoPlaying) {
+                brunoAudio.pause();
+            } else {
+                if (brunoAudio.readyState < 3) {
+                    updateMusicStatus('⏳ Menunggu musik dimuat...', '#ffa500');
+                    brunoAudio.addEventListener('canplay', function() {
+                        brunoAudio.play().catch(error => {
+                            console.error('Play error:', error);
+                            updateMusicStatus('❌ Gagal memutar. Coba "Test Alternatif"', '#dc3545');
+                        });
+                    }, { once: true });
+                } else {
+                    brunoAudio.play().catch(error => {
+                        console.error('Play error:', error);
+                        updateMusicStatus('❌ Gagal memutar. Coba "Test Alternatif"', '#dc3545');
+                    });
+                }
+            }
+        }
+
+        function stopBrunoMajor() {
+            if (brunoAudio) {
+                brunoAudio.pause();
+                brunoAudio.currentTime = 0;
+                isBrunoPlaying = false;
+                updateMusicStatus('⏹️ Musik dihentikan', '#ffa500');
+                document.getElementById('playBtn').innerHTML = '▶️ Putar Musik Romantis';
+                showMusicNotification('⏹️ Musik "Nothing" dihentikan');
+            }
+        }
+
+        // Initialize game
+        function initGame() {
+            gameCanvas = document.getElementById('gameCanvas');
+            gameCtx = gameCanvas.getContext('2d');
+            
+            // Load high score from localStorage
+            try {
+                highScore = parseInt(localStorage.getItem('anniversaryDinoHighScore') || '0');
+            } catch(e) {
+                highScore = 0;
+            }
+            document.getElementById('highScore').textContent = highScore;
+            
+            // Create initial clouds
+            for (let i = 0; i < 3; i++) {
+                clouds.push({
+                    x: 200 + i * 200,
+                    y: 30 + Math.random() * 50,
+                    width: 60,
+                    height: 30,
+                    speed: 1
+                });
+            }
+            
+            // Event listeners
+            document.addEventListener('keydown', function(e) {
+                if (e.code === 'Space' && gameRunning) {
+                    e.preventDefault();
+                    jump();
+                }
+            });
+            
+            gameCanvas.addEventListener('click', function() {
+                if (gameRunning) {
+                    jump();
+                }
+            });
+            
+            // Draw initial state
+            drawGame();
+        }
+
+        function startGame() {
+            if (gameRunning) return;
+            
+            gameRunning = true;
+            gamePaused = false;
+            gameScore = 0;
+            gameSpeed = 3;
+            gameFrame = 0;
+            
+            // Reset dino
+            dino.y = 150;
+            dino.jumping = false;
+            dino.grounded = true;
+            dino.velocity = 0;
+            
+            // Clear obstacles
+            obstacles = [];
+            
+            // Update UI
+            document.getElementById('startBtn').disabled = true;
+            document.getElementById('pauseBtn').disabled = false;
+            document.getElementById('gameScore').textContent = '0';
+            
+            // Start game loop
+            gameLoop();
+            
+            showMusicNotification('🎮 Anniversary Dino Game dimulai! Selamat bermain! 🦕');
+        }
+
+        function pauseGame() {
+            if (!gameRunning) return;
+            
+            gamePaused = !gamePaused;
+            document.getElementById('pauseBtn').textContent = gamePaused ? '▶️ Resume' : '⏸️ Pause';
+            
+            if (!gamePaused) {
+                gameLoop();
+            }
+        }
+
+        function resetGame() {
+            gameRunning = false;
+            gamePaused = false;
+            gameScore = 0;
+            gameSpeed = 3;
+            gameFrame = 0;
+            
+            // Reset dino
+            dino.y = 150;
+            dino.jumping = false;
+            dino.grounded = true;
+            dino.velocity = 0;
+            
+            // Clear obstacles
+            obstacles = [];
+            
+            // Update UI
+            document.getElementById('startBtn').disabled = false;
+            document.getElementById('pauseBtn').disabled = true;
+            document.getElementById('pauseBtn').textContent = '⏸️ Pause';
+            document.getElementById('gameScore').textContent = '0';
+            
+            drawGame();
+            showMusicNotification('🔄 Game direset! Siap untuk challenge baru?');
+        }
+
+        function jump() {
+            if (dino.grounded) {
+                dino.jumping = true;
+                dino.grounded = false;
+                dino.velocity = -12;
+                
+                // Create heart effect
+                hearts.push({
+                    x: dino.x + 20,
+                    y: dino.y + 10,
+                    life: 30,
+                    opacity: 1
+                });
+            }
+        }
+
+        function gameLoop() {
+            if (!gameRunning || gamePaused) return;
+            
+            update();
+            drawGame();
+            
+            requestAnimationFrame(gameLoop);
+        }
+
+        function update() {
+            gameFrame++;
+            
+            // Update score
+            gameScore = Math.floor(gameFrame / 10);
+            document.getElementById('gameScore').textContent = gameScore;
+            
+            // Increase speed
+            gameSpeed = 3 + gameScore / 100;
+            
+            // Update dino physics
+            if (dino.jumping) {
+                dino.velocity += 0.8;
+                dino.y += dino.velocity;
+                
+                if (dino.y >= 150) {
+                    dino.y = 150;
+                    dino.jumping = false;
+                    dino.grounded = true;
+                    dino.velocity = 0;
+                }
+            }
+            
+            // Spawn obstacles
+            if (gameFrame % Math.max(60, 100 - gameScore) === 0) {
+                obstacles.push({
+                    x: gameCanvas.width,
+                    y: 160,
+                    width: 20,
+                    height: 30,
+                    type: Math.random() > 0.7 ? 'heart' : 'cactus'
+                });
+            }
+            
+            // Update obstacles
+            for (let i = obstacles.length - 1; i >= 0; i--) {
+                obstacles[i].x -= gameSpeed;
+                
+                if (obstacles[i].x + obstacles[i].width < 0) {
+                    obstacles.splice(i, 1);
+                }
+            }
+            
+            // Update clouds
+            clouds.forEach(cloud => {
+                cloud.x -= cloud.speed;
+                if (cloud.x + cloud.width < 0) {
+                    cloud.x = gameCanvas.width;
+                    cloud.y = 30 + Math.random() * 50;
+                }
+            });
+            
+            // Update hearts effect
+            for (let i = hearts.length - 1; i >= 0; i--) {
+                hearts[i].life--;
+                hearts[i].y -= 2;
+                hearts[i].opacity -= 0.03;
+                
+                if (hearts[i].life <= 0) {
+                    hearts.splice(i, 1);
+                }
+            }
+            
+            // Collision detection
+            checkCollisions();
+        }
+
+        function checkCollisions() {
+            for (let obstacle of obstacles) {
+                if (obstacle.type === 'cactus' &&
+                    dino.x < obstacle.x + obstacle.width &&
+                    dino.x + dino.width > obstacle.x &&
+                    dino.y < obstacle.y + obstacle.height &&
+                    dino.y + dino.height > obstacle.y) {
+                    
+                    gameOver();
+                    return;
+                }
+                
+                if (obstacle.type === 'heart' &&
+                    dino.x < obstacle.x + obstacle.width &&
+                    dino.x + dino.width > obstacle.x &&
+                    dino.y < obstacle.y + obstacle.height &&
+                    dino.y + dino.height > obstacle.y) {
+                    
+                    obstacles.splice(obstacles.indexOf(obstacle), 1);
+                    gameScore += 10;
+                    gameFrame += 100;
+                    
+                    for (let i = 0; i < 5; i++) {
+                        hearts.push({
+                            x: obstacle.x + Math.random() * 40,
+                            y: obstacle.y + Math.random() * 20,
+                            life: 40,
+                            opacity: 1
+                        });
+                    }
+                    
+                    showMusicNotification('💕 +10 points! Cinta bonus!');
+                }
+            }
+        }
+
+        function gameOver() {
+            gameRunning = false;
+            
+            if (gameScore > highScore) {
+                highScore = gameScore;
+                try {
+                    localStorage.setItem('anniversaryDinoHighScore', highScore.toString());
+                } catch(e) {
+                    console.log('Cannot save to localStorage');
+                }
+                document.getElementById('highScore').textContent = highScore;
+                showLuxuryAlert('🏆 NEW HIGH SCORE! 🏆\n\nAmazing! Score: ' + gameScore + '\n\nKamu hebat sekali! 💕', '🎉 Congratulations!');
+            } else {
+                showLuxuryAlert('💔 Game Over! 💔\n\nScore: ' + gameScore + '\nHigh Score: ' + highScore + '\n\nCoba lagi yuk! 🦕', '🎮 Game Over');
+            }
+            
+            document.getElementById('startBtn').disabled = false;
+            document.getElementById('pauseBtn').disabled = true;
+            document.getElementById('pauseBtn').textContent = '⏸️ Pause';
+        }
+
+        function drawGame() {
+            // Clear canvas
+            const gradient = gameCtx.createLinearGradient(0, 0, 0, gameCanvas.height);
+            gradient.addColorStop(0, '#e8f4fd');
+            gradient.addColorStop(1, '#fef7e0');
+            gameCtx.fillStyle = gradient;
+            gameCtx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
+            
+            // Draw clouds
+            gameCtx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+            clouds.forEach(cloud => {
+                drawCloud(cloud.x, cloud.y, cloud.width, cloud.height);
+            });
+            
+            // Draw ground
+            gameCtx.fillStyle = 'rgba(255, 182, 193, 0.3)';
+            gameCtx.fillRect(0, 190, gameCanvas.width, 10);
+            
+            // Draw dino
+            drawDino();
+            
+            // Draw obstacles
+            obstacles.forEach(obstacle => {
+                if (obstacle.type === 'cactus') {
+                    drawCactus(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+                } else {
+                    drawHeartObstacle(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+                }
+            });
+            
+            // Draw heart effects
+            hearts.forEach(heart => {
+                gameCtx.save();
+                gameCtx.globalAlpha = heart.opacity;
+                gameCtx.fillStyle = '#ff69b4';
+                gameCtx.font = '20px Arial';
+                gameCtx.fillText('💕', heart.x, heart.y);
+                gameCtx.restore();
+            });
+            
+            // Draw UI text if game not running
+            if (!gameRunning) {
+                gameCtx.fillStyle = 'rgba(255, 182, 193, 0.9)';
+                gameCtx.font = 'bold 24px Arial';
+                gameCtx.textAlign = 'center';
+                gameCtx.fillText('🦕 Anniversary Dino Game 💕', gameCanvas.width / 2, gameCanvas.height / 2 - 20);
+                
+                gameCtx.font = '16px Arial';
+                gameCtx.fillStyle = '#666';
+                gameCtx.fillText('Tekan START untuk mulai bermain!', gameCanvas.width / 2, gameCanvas.height / 2 + 10);
+                gameCtx.textAlign = 'left';
+            }
+            
+            if (gamePaused) {
+                gameCtx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+                gameCtx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
+                
+                gameCtx.fillStyle = '#d63384';
+                gameCtx.font = 'bold 32px Arial';
+                gameCtx.textAlign = 'center';
+                gameCtx.fillText('⏸️ PAUSED', gameCanvas.width / 2, gameCanvas.height / 2);
+                gameCtx.textAlign = 'left';
+            }
+        }
+
+        function drawDino() {
+            const x = dino.x;
+            const y = dino.y;
+            
+            // Dino body
+            gameCtx.fillStyle = dino.color;
+            gameCtx.fillRect(x, y, dino.width, dino.height);
+            
+            // Dino face
+            gameCtx.fillStyle = '#fff';
+            gameCtx.beginPath();
+            gameCtx.arc(x + 30, y + 15, 8, 0, Math.PI * 2);
+            gameCtx.fill();
+            
+            // Eyes
+            gameCtx.fillStyle = '#333';
+            gameCtx.beginPath();
+            gameCtx.arc(x + 28, y + 12, 2, 0, Math.PI * 2);
+            gameCtx.arc(x + 32, y + 12, 2, 0, Math.PI * 2);
+            gameCtx.fill();
+            
+            // Crown
+            gameCtx.fillStyle = '#ffd700';
+            gameCtx.font = '16px Arial';
+            gameCtx.fillText('👑', x + 20, y - 5);
+        }
+
+        function drawCactus(x, y, width, height) {
+            gameCtx.fillStyle = '#4a90a4';
+            gameCtx.fillRect(x, y, width, height);
+            gameCtx.fillStyle = '#2d5a87';
+            gameCtx.font = '12px Arial';
+            gameCtx.fillText('🌵', x - 2, y + height - 5);
+        }
+
+        function drawHeartObstacle(x, y, width, height) {
+            gameCtx.fillStyle = '#ff69b4';
+            gameCtx.font = '24px Arial';
+            gameCtx.fillText('💖', x, y + height);
+        }
+
+        function drawCloud(x, y, width, height) {
+            gameCtx.beginPath();
+            gameCtx.arc(x, y + height / 2, height / 2, Math.PI, 0);
+            gameCtx.arc(x + width / 4, y, height / 2, Math.PI, 0);
+            gameCtx.arc(x + width / 2, y, height / 2, Math.PI, 0);
+            gameCtx.arc(x + 3 * width / 4, y + height / 4, height / 4, Math.PI, 0);
+            gameCtx.arc(x + width, y + height / 2, height / 2, Math.PI, 0);
+            gameCtx.fill();
+        }
+
+        function showRomanticNotification() {
+            const notification = document.createElement('div');
+            notification.innerHTML = `
+                <div style="text-align: center;">
+                    <h3 style="margin: 0 0 15px 0; font-family: 'Playfair Display', serif;">🎵 Nothing - Bruno Major 🎵</h3>
+                    <p style="margin: 0; font-size: 16px; opacity: 0.9;">Musik romantis untuk anniversary ke-5 yang indah</p>
+                    <div style="margin-top: 15px; font-size: 28px;">💕✨🌸✨💕</div>
+                </div>
+            `;
+            notification.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 248, 240, 0.98));
+                color: #d63384;
+                padding: 40px;
+                border-radius: 25px;
+                z-index: 2000;
+                box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+                max-width: 400px;
+                animation: romanticPop 0.8s ease-out;
+                backdrop-filter: blur(20px);
+                border: 3px solid rgba(255, 182, 193, 0.3);
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'fadeOut 1s ease-out';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 1000);
+            }, 5000);
+        }
+
+        function showMusicNotification(message) {
+            const notification = document.createElement('div');
+            notification.innerHTML = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 30px;
+                right: 30px;
+                background: linear-gradient(135deg, #ff6b9d, #ff8fab);
+                color: white;
+                padding: 20px 25px;
+                border-radius: 20px;
+                font-size: 14px;
+                font-weight: 500;
+                z-index: 1500;
+                box-shadow: 0 15px 35px rgba(255, 107, 157, 0.3);
+                max-width: 350px;
+                animation: slideInRight 0.5s ease-out;
+                border: 2px solid rgba(255, 255, 255, 0.2);
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'fadeOut 0.5s ease-out';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 500);
+            }, 4000);
+        }
+
+        function createFloatingElements() {
+            const container = document.querySelector('.floating-elements');
+            
+            setInterval(() => {
+                if (isBrunoPlaying) {
+                    const element = document.createElement('div');
+                    element.className = 'floating-element';
+                    element.innerHTML = ['🌸', '💕', '✨', '🌺', '💖', '🦋'][Math.floor(Math.random() * 6)];
+                    element.style.left = Math.random() * 100 + '%';
+                    element.style.animationDuration = (Math.random() * 4 + 6) + 's';
+                    element.style.fontSize = (Math.random() * 1 + 1.5) + 'rem';
+                    
+                    container.appendChild(element);
+                    
+                    setTimeout(() => {
+                        if (element.parentNode) element.parentNode.removeChild(element);
+                    }, 8000);
+                }
+            }, 2000);
+        }
+
+        // Interactive functions
+        function showSurprise() {
+            const surprises = [
+                "🎉 Selamat Anniversary ke-5! Kamu adalah hadiah terbaik dalam hidupku!",
+                "💝 Surprise! Setiap hari bersamamu adalah hari yang spesial!",
+                "🌟 5 tahun yang luar biasa, dan ini baru permulaan perjalanan cinta kita!",
+                "💖 Terima kasih telah membuat hidupku penuh warna dan kebahagiaan!",
+                "🎊 Cinta kita semakin indah seiring berjalannya waktu!"
+            ];
+            
+            const randomSurprise = surprises[Math.floor(Math.random() * surprises.length)];
+            showLuxuryAlert(randomSurprise, '🎁 Surprise Spesial');
+        }
+
+        function showMessage() {
+            const messages = [
+                "💌 Untuk yang terkasih, lima tahun berlalu seperti sekejap mata. Terima kasih telah menjadi partner hidup terbaik!",
+                "💕 Setiap detik bersamamu adalah berkah. Mari kita terus menulis cerita cinta yang indah!",
+                "🌹 Kamu adalah alasan mengapa aku percaya pada cinta sejati. I love you more each day!",
+                "✨ Lima tahun yang penuh dengan kebahagiaan, dan aku tidak sabar untuk tahun-tahun berikutnya!"
+            ];
+            
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            showLuxuryAlert(randomMessage, '💌 Love Letter');
+        }
+
+        function showLuxuryAlert(message, title) {
+            const alert = document.createElement('div');
+            alert.innerHTML = `
+                <div style="text-align: center;">
+                    <h3 style="margin: 0 0 20px 0; font-family: 'Playfair Display', serif; color: #d63384; font-size: 1.8rem;">${title}</h3>
+                    <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #666;">${message}</p>
+                    <button onclick="this.parentElement.parentElement.remove()" style="margin-top: 25px; background: linear-gradient(135deg, #ff6b9d, #ff8fab); color: white; border: none; padding: 12px 25px; border-radius: 20px; cursor: pointer; font-weight: 500;">
+                        ✨ Tutup
+                    </button>
+                </div>
+            `;
+            alert.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 248, 240, 0.98));
+                padding: 40px;
+                border-radius: 25px;
+                z-index: 3000;
+                box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+                max-width: 500px;
+                animation: romanticPop 0.6s ease-out;
+                backdrop-filter: blur(20px);
+                border: 3px solid rgba(255, 182, 193, 0.3);
+            `;
+            
+            document.body.appendChild(alert);
+        }
+
+        function showMusicPlayer() {
+            const player = document.getElementById('musicPlayer');
+            if (player.style.display === 'none') {
+                player.style.display = 'block';
+                player.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                player.style.display = 'none';
+            }
+        }
+
+        // Web Audio API romantic tones
+        function playRomanticTone(theme) {
+            stopAllMusic();
+            
+            if (typeof(AudioContext) !== "undefined" || typeof(webkitAudioContext) !== "undefined") {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                
+                let melody, tempo, title;
+                
+                switch(theme) {
+                    case 'love':
+                        melody = [
+                            { freq: 261.63, duration: 0.8 }, { freq: 293.66, duration: 0.4 },
+                            { freq: 329.63, duration: 0.8 }, { freq: 349.23, duration: 0.4 },
+                            { freq: 392.00, duration: 1.2 }, { freq: 329.63, duration: 0.8 },
+                            { freq: 261.63, duration: 1.6 }
+                        ];
+                        tempo = 0.8;
+                        title = "💕 Love Theme";
+                        break;
+                        
+                    case 'happy':
+                        melody = [
+                            { freq: 392.00, duration: 0.3 }, { freq: 392.00, duration: 0.3 },
+                            { freq: 440.00, duration: 0.6 }, { freq: 392.00, duration: 0.6 },
+                            { freq: 523.25, duration: 0.6 }, { freq: 493.88, duration: 1.2 }
+                        ];
+                        tempo = 0.6;
+                        title = "🎉 Celebration";
+                        break;
+                        
+                    case 'dreamy':
+                        melody = [
+                            { freq: 220.00, duration: 1.0 }, { freq: 246.94, duration: 1.0 },
+                            { freq: 261.63, duration: 1.0 }, { freq: 293.66, duration: 0.5 },
+                            { freq: 329.63, duration: 1.5 }, { freq: 293.66, duration: 1.0 },
+                            { freq: 261.63, duration: 2.0 }
+                        ];
+                        tempo = 1.2;
+                        title = "🌙 Dreamy Night";
+                        break;
+                        
+                    case 'waltz':
+                        melody = [
+                            { freq: 261.63, duration: 0.6 }, { freq: 329.63, duration: 0.6 },
+                            { freq: 392.00, duration: 0.6 }, { freq: 523.25, duration: 0.4 },
+                            { freq: 493.88, duration: 0.4 }, { freq: 440.00, duration: 0.4 },
+                            { freq: 392.00, duration: 0.6 }, { freq: 329.63, duration: 0.6 },
+                            { freq: 261.63, duration: 1.2 }
+                        ];
+                        tempo = 0.7;
+                        title = "💃 Wedding Waltz";
+                        break;
+                }
+                
+                isWebAudioPlaying = true;
+                let noteIndex = 0;
+                
+                function playNote() {
+                    if (!isWebAudioPlaying) return;
+                    
+                    const oscillator = audioContext.createOscillator();
+                    const gainNode = audioContext.createGain();
+                    
+                    oscillator.connect(gainNode);
+                    gainNode.connect(audioContext.destination);
+                    
+                    oscillator.frequency.setValueAtTime(melody[noteIndex].freq, audioContext.currentTime);
+                    oscillator.type = 'sine';
+                    
+                    gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+                    gainNode.gain.linearRampToValueAtTime(0.1, audioContext.currentTime + 0.1);
+                    gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + melody[noteIndex].duration * tempo);
+                    
+                    oscillator.start(audioContext.currentTime);
+                    oscillator.stop(audioContext.currentTime + melody[noteIndex].duration * tempo);
+                    
+                    noteIndex = (noteIndex + 1) % melody.length;
+                    
+                    setTimeout(playNote, melody[noteIndex === 0 ? melody.length - 1 : noteIndex - 1].duration * tempo * 1000);
+                }
+                
+                playNote();
+                showMusicNotification(`🎵 Sedang memutar: ${title}`);
+            }
+        }
+
+        function stopAllMusic() {
+            isWebAudioPlaying = false;
+            if (audioContext) {
+                audioContext.close();
+                audioContext = null;
+            }
+            
+            if (brunoAudio && isBrunoPlaying) {
+                brunoAudio.pause();
+                brunoAudio.currentTime = 0;
+                isBrunoPlaying = false;
+                updateMusicStatus('⏹️ Musik dihentikan', '#ffa500');
+                document.getElementById('playBtn').innerHTML = '▶️ Putar Musik Romantis';
+            }
+            
+            showMusicNotification('🎵 Semua musik dihentikan');
+        }
+
+        // Sparkle effect on click
+        document.addEventListener('click', function(e) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.innerHTML = '✨';
+            sparkle.style.left = e.clientX + 'px';
+            sparkle.style.top = e.clientY + 'px';
+            
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => {
+                if (sparkle.parentNode) sparkle.parentNode.removeChild(sparkle);
+            }, 1000);
+        });
+
+        // Initialize everything
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                initBrunoMajorMusic();
+                createFloatingElements();
+                initGame();
+            }, 2000);
+        });
+
+        // Auto-start on user interaction
+        let hasUserInteracted = false;
+        function enableAutoStart() {
+            if (!hasUserInteracted) {
+                hasUserInteracted = true;
+                setTimeout(() => {
+                    if (!hasStartedOnce && brunoAudio) {
+                        attemptAutoPlay();
+                    }
+                }, 2000);
+            }
+        }
+
+        ['click', 'touchstart', 'keydown', 'scroll'].forEach(event => {
+            document.addEventListener(event, enableAutoStart, { once: true });
+        });
+    </script>
+</body>
+</html>
